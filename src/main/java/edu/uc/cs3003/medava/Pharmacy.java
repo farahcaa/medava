@@ -3,7 +3,7 @@ public class Pharmacy {
     public Pharmacy(String pharmacyName) {
         mPharmacyName = pharmacyName;
     }
-           public boolean send(Transporter t) {
+    public boolean send(Transporter t) {
         Medicine advil = new Ibuprofen();
         if (t.load(advil)) {
             System.out.println(String.format("Sending %s on the %s transporter.", advil.getMedicineName(),
@@ -30,6 +30,16 @@ public class Pharmacy {
                     t.getTransporterName()));
         } else {
             System.out.println(String.format("Cannot load %s on to the %s transporter.", oxycontin.getMedicineName(),
+                    t.getTransporterName()));
+            return false;
+        }
+
+        Jarvik heart = new Jarvik("01j9a9lk71");
+        if (t.load(heart)) {
+            System.out.println(String.format("Sending %s on the %s transporter.", heart.getMedicineName(),
+                    t.getTransporterName()));
+        } else {
+            System.out.println(String.format("Cannot load %s on to the %s transporter.", heart.getMedicineName(),
                     t.getTransporterName()));
             return false;
         }
