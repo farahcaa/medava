@@ -1,1 +1,5 @@
-What does the static key word do to the class?
+What does the static key word do to the class I know we went over it in class but I dont really remember?
+
+what does package edu.uc.cs3003.medava; this line do in all of the files?
+
+what does the super key word mean in the oxycodone file we use super(medicinename:"oxycodone") is this like a constructor?
